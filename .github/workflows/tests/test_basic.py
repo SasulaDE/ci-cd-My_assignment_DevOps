@@ -2,11 +2,11 @@ import json
 import csv
 import os
 
-# G Requirement - Basic passing test
+#  Basic passing test
 def test_always_passes():
     assert True
 
-# VG Requirement - CSV Tests
+#  CSV Tests
 def test_csv_has_12_columns():
     with open('profiles1.csv', 'r') as f:
         reader = csv.reader(f)
@@ -19,7 +19,7 @@ def test_csv_has_900plus_rows():
         row_count = sum(1 for row in reader) - 1  # Subtract header
         assert row_count > 900, "CSV should have 900+ rows"
 
-# VG Requirement - JSON Tests
+#  the  JSON Tests
 def test_json_has_all_properties():
     with open('data.json', 'r') as f:
         data = json.load(f)
